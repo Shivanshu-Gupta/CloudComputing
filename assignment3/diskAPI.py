@@ -32,24 +32,48 @@ if __name__ == '__main__':
     disk = DiskController(100,500)
     user = DiskAPI(disk)
 
-    #create 2 disks
-    user.CreateDisc(1,300)
-    user.CreateDisc(2,100)
-    #read operation
-    a = user.read(1,200)
-    # a = [int(i) for i in a]
-    # print(a)
-    
+    user.CreateDisc(1,100)
     block_update = [1]*100
     block_update = bytearray(block_update)
-    user.write(1,200,block_update)
-    b = user.read(1,200)
-    # b = [int(i) for i in b]
-    # print(b)
+    user.write(1,50,block_update)
+    #read operation
+    a = user.read(1,50)
+    a = [int(i) for i in a]
+    print(a)
+    a = user.read(1,50)
+    a = [int(i) for i in a]
+    print(a)
+    a = user.read(1,50)
+    a = [int(i) for i in a]
+    print(a)
+    a = user.read(1,50)
+    a = [int(i) for i in a]
+    print(a)
+    a = user.read(1,50)
+    a = [int(i) for i in a]
+    print(a)
+    a = user.read(1,50)
+    a = [int(i) for i in a]
+    print(a)
+    a = user.read(1,50)
+    a = [int(i) for i in a]
+    print(a)
+    block_update = [2]*100
+    block_update = bytearray(block_update)
+    user.write(1,50,block_update)
+    a = user.read(1,50)
+    a = [int(i) for i in a]
+    print(a)
+    a = user.read(1,50)
+    a = [int(i) for i in a]
+    print(a)
+    a = user.read(1,50)
+    a = [int(i) for i in a]
+    print(a)
+    a = user.read(1,50)
+    a = [int(i) for i in a]
+    print(a)
+    a = user.read(1,50)
+    a = [int(i) for i in a]
+    print(a)
     user.DeleteDisk(1)
-    user.CreateDisc(3,400)
-    user.write(3,100,block_update)
-    b = user.read(3,100)
-    b = [int(i) for i in b]
-    print(b)
-    user.CreateDisc(4,100)
